@@ -54,6 +54,12 @@ class Sidebar extends Component {
           </Link>
         </li>
         <li className="nav-item">
+          <Link className="nav-link" to="/recipes">
+            <i className="fas fa-fw fa-box" />
+            <span> Recipes</span>
+          </Link>
+        </li>
+        <li className="nav-item">
           <Link className="nav-link" to="/billing-cycles">
             <i className="fas fa-fw fa-clock" />
             <span> Billing Cycles</span>

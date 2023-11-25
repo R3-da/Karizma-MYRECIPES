@@ -9,6 +9,7 @@ import subscriptions from './subscriptions';
 import attendance from './attendance';
 import activities from './activities';
 import account from './account';
+import recipes from './recipes';
 
 const routes = [
   auth,
@@ -21,6 +22,7 @@ const routes = [
   members,
   billing_cycles,
   subscriptions,
+  recipes,
   {
     path: '/404',
     component: NotFound,
