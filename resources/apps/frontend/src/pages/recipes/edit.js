@@ -1,7 +1,7 @@
 import React from 'react';
 
 import {Card, CardBody} from 'reactstrap';
-import {updatePackage, showPackage} from 'requests/packages';
+import {updatePackage, showPackage} from 'requests/recipes';
 import Breadcrumbs from 'components/Breadcrumbs';
 import Form from './form';
 import Loader from 'components/Loader';
@@ -37,8 +37,8 @@ class Component extends React.Component {
   get previous() {
     return [
       {
-        to: '/packages',
-        label: 'Packages',
+        to: '/recipes',
+        label: 'Recipes',
       },
     ];
   }

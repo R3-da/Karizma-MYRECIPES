@@ -10,7 +10,7 @@ import queryFilters from 'utils/query-filters';
 import notify from 'utils/notify';
 import date from 'utils/date';
 import getErrorMessage from 'utils/getErrorMessage';
-import {loadPackages, destroyPackage} from 'requests/packages';
+import {loadPackages, destroyPackage} from 'requests/recipes';
 import Pagination from 'components/Pagination/PaginationWithFilter';
 import Status from 'components/Badges/Status';
 
@@ -85,7 +85,7 @@ class Component extends React.Component {
   };
 
   getTableActions = payload => {
-    let actions = [{label: 'Edit', href: `/packages/${payload.id}/edit`}];
+    let actions = [{label: 'Edit', href: `/recipes/${payload.id}/edit`}];
 
     if (payload.status !== 'deleted') {
       actions.push({
@@ -115,7 +115,7 @@ class Component extends React.Component {
       <tr key={item.id}>
         <td>{item.id}</td>
         <td>
-          <Link to={`/packages/${item.id}`}>
+          <Link to={`/recipes/${item.id}`}>
             {item.name || 'Not Available'}
           </Link>
         </td>

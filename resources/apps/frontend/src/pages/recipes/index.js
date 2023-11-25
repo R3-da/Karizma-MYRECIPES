@@ -7,7 +7,7 @@ import renderRoutes from './../routes';
 export default {
   exact: false,
   auth: true,
-  path: '/packages',
+  path: '/recipes',
   component: ({routes}) => {
     return <PrivateLayout>{renderRoutes(routes)}</PrivateLayout>;
   },
@@ -15,7 +15,7 @@ export default {
     {
       exact: true,
       auth: true,
-      path: '/packages',
+      path: '/recipes',
       component: Loadable({
         loader: () => import('./lists'),
       }),
@@ -23,7 +23,7 @@ export default {
     {
       exact: true,
       auth: true,
-      path: '/packages/create',
+      path: '/recipes/create',
       component: Loadable({
         loader: () => import('./create'),
       }),
@@ -31,7 +31,7 @@ export default {
     {
       exact: true,
       auth: true,
-      path: '/packages/:id',
+      path: '/recipes/:id',
       component: Loadable({
         loader: () => import('./show'),
       }),
@@ -39,7 +39,7 @@ export default {
     {
       exact: true,
       auth: true,
-      path: '/packages/:id/edit',
+      path: '/recipes/:id/edit',
       component: Loadable({
         loader: () => import('./edit'),
       }),

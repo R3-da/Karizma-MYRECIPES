@@ -3,7 +3,7 @@ import React from 'react';
 import {Card, CardBody} from 'reactstrap';
 import Form from './form';
 import Breadcrumbs from 'components/Breadcrumbs';
-import {createPackage} from 'requests/packages';
+import {createPackage} from 'requests/recipes';
 
 class Component extends React.Component {
   state = {};
@@ -11,8 +11,8 @@ class Component extends React.Component {
   get previous() {
     return [
       {
-        to: '/packages',
-        label: 'Packages',
+        to: '/recipes',
+        label: 'Recipes',
       },
     ];
   }
@@ -20,7 +20,7 @@ class Component extends React.Component {
   onSubmit = data => {
     return createPackage(data).then(() => {
       setTimeout(() => {
-        this.props.history.replace('/packages');
+        this.props.history.replace('/recipes');
       }, 1000);
     });
   };

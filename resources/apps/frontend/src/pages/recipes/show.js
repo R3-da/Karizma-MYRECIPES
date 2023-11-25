@@ -12,7 +12,7 @@ import {
 } from 'reactstrap';
 
 import {Link} from 'react-router-dom';
-import {showPackage} from 'requests/packages';
+import {showPackage} from 'requests/recipes';
 import Breadcrumbs from 'components/Breadcrumbs';
 import Loader from 'components/Loader';
 
@@ -47,8 +47,8 @@ class Component extends React.Component {
   get previous() {
     return [
       {
-        to: '/packages',
-        label: 'Packages',
+        to: '/recipes',
+        label: 'Recipes',
       },
     ];
   }
@@ -196,7 +196,7 @@ class Component extends React.Component {
                 </Col>
               </Row>
               <Link
-                to={`/packages/${id}/edit`}
+                to={`/recipes/${id}/edit`}
                 className="btn btn-primary align-right"
               >
                 Edit Package

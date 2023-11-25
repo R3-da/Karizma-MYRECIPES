@@ -47,7 +47,7 @@ class Component extends React.Component {
           </Col>
           <Col md={6} />
           <Col md={2}>
-            <Link to="/packages/create" className="float-right btn btn-primary">
+            <Link to="/recipes/create" className="float-right btn btn-primary">
               <i className="fa fa-plus" /> Add Package
             </Link>
           </Col>
