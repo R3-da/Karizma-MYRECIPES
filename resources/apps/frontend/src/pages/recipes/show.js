@@ -58,12 +58,10 @@ class Component extends React.Component {
     const {id} = this.props.match.params;
     const {
       name,
-      amount,
+      duration,
       status,
       created_at,
       updated_at,
-      service,
-      cycle,
     } = this.state.data;
     return (
       <React.Fragment>
@@ -89,13 +87,13 @@ class Component extends React.Component {
                 </Col>
                 <Col md={3}>
                   <FormGroup>
-                    <Label for="amount">Amount</Label>
+                    <Label for="duration">Duration</Label>
                     <Input
                       type="text"
-                      name="amount"
-                      id="amount"
+                      name="duration"
+                      id="duration"
                       required
-                      defaultValue={amount}
+                      defaultValue={duration}
                       readOnly={true}
                     />
                   </FormGroup>
@@ -110,56 +108,6 @@ class Component extends React.Component {
                       id="status"
                       required
                       defaultValue={status}
-                      readOnly={true}
-                    />
-                  </FormGroup>
-                </Col>
-              </Row>
-
-              <Row>
-                <Col md={6}>
-                  <FormGroup>
-                    <Label for="service">Service</Label>
-                    <Input
-                      type="text"
-                      required
-                      defaultValue={service.name}
-                      readOnly={true}
-                    />
-                  </FormGroup>
-                </Col>
-                <Col md={6}>
-                  <FormGroup>
-                    <Label for="amount">Service ID</Label>
-                    <Input
-                      type="text"
-                      required
-                      defaultValue={service.id}
-                      readOnly={true}
-                    />
-                  </FormGroup>
-                </Col>
-              </Row>
-
-              <Row>
-                <Col md={6}>
-                  <FormGroup>
-                    <Label>Billing Cycle</Label>
-                    <Input
-                      type="text"
-                      required
-                      defaultValue={cycle.name}
-                      readOnly={true}
-                    />
-                  </FormGroup>
-                </Col>
-                <Col md={6}>
-                  <FormGroup>
-                    <Label>Billing Cycle ID</Label>
-                    <Input
-                      type="text"
-                      required
-                      defaultValue={cycle.id}
                       readOnly={true}
                     />
                   </FormGroup>

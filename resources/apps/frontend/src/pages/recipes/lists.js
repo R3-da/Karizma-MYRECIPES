@@ -69,9 +69,9 @@ class Component extends React.Component {
     return [
       'ID',
       'Name',
-      'Billing Cycle',
-      'Service',
-      'Amount',
+      'Ingredients',
+      'Instructions',
+      'Duration',
       'Status',
       'Updated',
       'Actions',
@@ -119,17 +119,7 @@ class Component extends React.Component {
             {item.name || 'Not Available'}
           </Link>
         </td>
-        <td>
-          <Link to={`/billing-cycles/${item.cycle.id}`}>
-            {item.cycle.name || 'Not Available'}
-          </Link>
-        </td>
-        <td>
-          <Link to={`/services/${item.service.id}`}>
-            {item.service.name || 'Not Available'}
-          </Link>
-        </td>
-        <td>{item.amount}</td>
+        <td>{item.duration}</td>
         <td className="align-center text-center">
           <Status value={item.status} />
         </td>

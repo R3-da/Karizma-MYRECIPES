@@ -21,6 +21,7 @@ Route::group(['middleware' => ['jwt.auth', 'admin']], function() {
     Route::resource('cycles', 'CycleController');
     Route::resource('services', 'ServiceController');
     Route::resource('packages', 'PackageController');
+    Route::resource('recipes', 'RecipeController');
     Route::resource('users', 'UserController');
     Route::resource('subscriptions', 'SubscriptionController');
     Route::post('upload', 'ImageController@store');
@@ -28,6 +29,7 @@ Route::group(['middleware' => ['jwt.auth', 'admin']], function() {
     Route::get('/stats/services', 'StatisticsController@services');
     Route::get('/stats/members', 'StatisticsController@members');
     Route::get('/stats/packages', 'StatisticsController@packages');
+    Route::get('/stats/recipes', 'StatisticsController@recipes');
     Route::group(['prefix' => 'activities'], function() {
         Route::get('system', 'ActivityController@system');
         Route::get('attendance', 'ActivityController@attendance');

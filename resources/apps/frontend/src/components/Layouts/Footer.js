@@ -10,7 +10,7 @@ class Footer extends Component {
           <div className="copyright text-center my-auto">
             <span>
               Copyright &copy; {process.env.REACT_APP_APP_NAME || 'Laragym'}{' '}
-              2018
+              2023
             </span>
           </div>
         </div>
